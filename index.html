@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHEEKATI ABHIJITH | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: url('https://wallpapercave.com/wp/uUqxVHp.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    #intro {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    #intro h1 {
+      font-size: 3rem;
+      color: #2b6cb0;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(-30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    #intro button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: #2b6cb0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #intro button:hover {
+      background-color: #1a4f8a;
+    }
+
+    #mainContent {
+      display: none;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+    }
+
+    .section {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, background-color 0.3s ease;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .section:hover {
+      transform: scale(1.05) rotate(2deg);
+      background-color: #edf2fb;
+    }
+
+    .section h2 {
+      color: #2b6cb0;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .editable {
+      display: none;
+      background-color: #e9f0ff;
+      padding: 1rem;
+      border-radius: 10px;
+      min-height: 100px;
+      border: 1px dashed #ccc;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .active .editable {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.8);
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <section id="intro">
+    <h1>CHEEKATI ABHIJITH</h1>
+    <button onclick="showSections()">Enter Portfolio</button>
+  </section>
+
+  <main id="mainContent">
+    <div class="section" onclick="toggleSection(this)">
+      <h2>About Me</h2>
+      <div class="editable">Your bio goes here...</div>
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+      <h2>Skills</h2>
+      <div class="editable">Your skills go here...</div>
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+      <h2>Projects</h2>
+      <div class="editable">Your projects go here...</div>
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+      <h2>Experience</h2>
+      <div class="editable">Your experience goes here...</div>
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+      <h2>Education</h2>
+      <div class="editable">Your education details go here...</div>
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+      <h2>Certifications</h2>
+      <div class="editable">Your certifications go here...</div>
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+      <h2>Hobbies</h2>
+      <div class="editable">Your hobbies and interests go here...</div>
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+      <h2>Contact</h2>
+      <div class="editable">Your contact details go here...</div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 CHEEKATI ABHIJITH. All rights reserved.
+  </footer>
+
+  <script>
+    function showSections() {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'flex';
+    }
+
+    function toggleSection(section) {
+      section.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
